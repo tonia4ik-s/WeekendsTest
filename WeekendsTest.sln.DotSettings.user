@@ -6,5 +6,6 @@
     &lt;TestId&gt;MSTest::34ECB4E8-D124-4799-81CD-44936A9B2640::net6.0::WeekendsTest.WorkDayCalculatorTests.TestWeekendAfterEnd&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::34ECB4E8-D124-4799-81CD-44936A9B2640::net6.0::WeekendsTest.WorkDayCalculatorTests.TestOneDay&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::34ECB4E8-D124-4799-81CD-44936A9B2640::net6.0::WeekendsTest.WorkDayCalculatorTests.TestStartFromWeekEnds&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::34ECB4E8-D124-4799-81CD-44936A9B2640::net6.0::WeekendsTest.WorkDayCalculatorTests.TestWeekendAfterWeekend&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
