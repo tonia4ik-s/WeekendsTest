@@ -15,7 +15,14 @@ public class WorkDayCalculator : IWorkDayCalculator
         foreach (var weekEnd in weekEnds)
         {
             var days = (weekEnd.StartDate - lastIterDate).Days;
-            if (duration + days < dayCount)
+            if (weekEnd.StartDate < startDate)
+            {
+                if (weekEnd.EndDate >= startDate)
+                {
+                    lastIterDate = weekEnd.EndDate.AddDays(1);
+                }
+            }
+            else if (duration + days < dayCount)
             {
                 duration += days;
                 lastIterDate = weekEnd.EndDate.AddDays(1);
@@ -26,13 +33,13 @@ public class WorkDayCalculator : IWorkDayCalculator
             }
             else
             {
-                var span = duration + days - dayCount + 1;
-                return weekEnd.StartDate.AddDays(-span);
+                var back = duration + days - dayCount + 1;
+                return weekEnd.StartDate.AddDays(-back);
             }
         }
 
-        var spanBack = dayCount - duration;
-        endDate = lastIterDate.AddDays(spanBack-1);
+        var span = dayCount - duration;
+        endDate = lastIterDate.AddDays(span-1);
 
         return endDate;
     }
